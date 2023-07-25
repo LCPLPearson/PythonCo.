@@ -49,4 +49,23 @@
 
     for number in numlist:
     print(number *5)
-    ~                       
+    ~     
+
+# Example
+
+    !/usr/bin/env python3
+    def guess_number(a):
+    while True:
+        b = int(input("enter a number: "))
+        if b > a:
+            print("too high")
+
+        elif b < a:
+            print("too low")
+
+        elif a == b:
+            print("win")
+            break
+
+
+    guess_number(23)
