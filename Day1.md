@@ -69,3 +69,20 @@
 
 
     guess_number(23)
+
+# Example
+    def steg_encode_char(char, cover):
+    charbin = format(ord(char), '0>8b')
+    for index in range(0,len(cover)):
+        coverbinl = list(format(int(cover[index]), '0>8b'))
+        coverbinl[-1] = charbin[index]
+        cover[index] = str(int(''.join(coverbinl),2))
+
+    def steg_decode_char(stego):
+    msgbits = []
+    for b in stego:
+        msgbits.append(bin(int(b))[-1])
+    return chr(int(''.join(msgbits),2))
+
+    if __name__ == '__main__':
+
