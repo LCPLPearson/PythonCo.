@@ -11,3 +11,6 @@ with open('test.txt', 'r') as fp:
 'First'
 fp.readline
 fp.readlines
+mystring = "Every Third Word"
+mystring.split(" ")
+['Every', 'Third', 'Word']
