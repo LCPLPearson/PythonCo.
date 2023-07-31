@@ -227,3 +227,5 @@ for i in range(len(arr)):
     if (arr[i+1] - arr[i]) !=1:
         return arr[i+1]
 return None
+
+### Keep only having to work in the first couple octets of the ip address | 
