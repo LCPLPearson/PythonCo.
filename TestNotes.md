@@ -112,3 +112,32 @@ def q10(numlist):
 for i in numlist:
   if i <0:
     return
+
+### Complete the solution so that it reverses the string passed into it.
+
+def solution(string):
+    return string[::-1]
+### The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value. Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+
+def rgb(r, g, b):
+
+    r = format(max(0, min(255, r)), '02X')
+    g = format(max(0, min(255, g)), '02X')
+    b = format(max(0, min(255, b)), '02X')
+
+    return r + g + b
+
+    pass
+
+### Complete the solution so that the function will break up camel casing, using a space between words.
+
+def solution(s):
+    return ''.join([' ' + char if char.isupper() else char for char in s])
+
+### Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+def digitize(n):
+    if n == 0:
+        return [0]
+    rd = [int(digit) for digit in str(n)][::-1]
+    return rd
