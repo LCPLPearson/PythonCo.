@@ -147,3 +147,83 @@ def greet(name, owner):
         return "Hello boss"
     else:
         return "Hello guest"
+
+### Exam 2 q1, given a string of multiple words separate by single spaces return a new string with the sentence reversed the words themselves should remain as they are
+
+l = []
+for i in words:
+l.append(i)
+return ''.join (l)
+
+return ' '.join(reversed(sentence.split()))
+
+### q2, given a positive integer return its string representation with commas seperating groups of 3 digits
+return '{:,}'.format(n)
+
+### q3, given two lists of integers return a sorted list that contains all integers from both listsin descending order
+a = lst0 + lst1
+a = sorted(a)
+a = reversed(a)
+#print(type(a))
+return list(a)
+return sorted(lst0+lst1???
+
+### q4, given 3 scores in the range 0-100 inclusive return 'GO' if the aerage score is greater than 50 return 'NOGO'
+
+avg = (s1+s2+s3) / 3.0
+if avg > 50.0:
+    return 'GO'
+    else:
+        return 'NOGO'
+
+### q5,    given an integer and a imit
+multiples = []
+for i in range(0, limit+1):
+    if i%integer==0 and i%2==0:
+    multiples.append(i)
+    return multiples
+### q6(f0, f1): given two filenames return a list whose elements consist of line numbers for which the two files differ the first line is considered line 0 
+diffs - []
+linenum = 0
+with open(f0) as fp0:
+with open(f1) as fp1:
+    lines0= fp0.readlines()
+    for i in fp1.readlines():
+    if i !_ lines0[linenum]:
+    diffs.append(linenum)
+    linenum += 1 
+    return diffs
+
+### q7(lst) return the first duplicate vaulu in the given list
+seen =[]
+for i in lst:
+    if i in seen:
+        return i
+        else:
+            seen.append(i)
+
+### q8(strng) given a sentence as a string with words being sepereated by a single space, return the length of the shortest word
+words = strng.spit()
+minlen = len(words[0])
+for word in words:
+if len(word) < minlen:
+minlen = len(word)
+return minlen
+
+return len(min(strng.split(),key=len))
+
+### q9(strng) given a alphanumeric string, return a character whose ascii value is that of the integer representation of all of the digits in the string concatenated in the orer in which they appear
+char = []
+for c in strng:
+    if c.isdigit():
+        chars.append(c)
+        x = ''.join(chars)
+        x = int(x)
+        x = chr(x)
+        return x
+
+### q10(arr): given a list of positive integers sorted in ascending order, return the first non-consecutive valur if all values are consecutive return None
+for i in range(len(arr)):
+    if (arr[i+1] - arr[i]) !=1:
+        return arr[i+1]
+return None
