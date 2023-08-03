@@ -82,7 +82,12 @@ echo $sky | md5sum | cut -d- -f1
 
 
 
-
+touch hashed.txt error.txt
+find /bin /var /etc -maxdepth 3 ! -type p -exec md5sum {} /; >> hashed.txt 2>> error.txt
+success=$(wc -l < hashed.txt)
+echo "Successfully Hashed Files: "$success
+fail=$(grep -c "Is a directory" error.txt)
+echo "Unsuccessfully Hashed Directories: "$fail
 
 
 
