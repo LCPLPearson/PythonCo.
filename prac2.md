@@ -77,6 +77,8 @@ return None
 
 fun=$(sort -n -t: -k4 /etc/passwd | head -10 | tail -1 | cut -d: -f6)
 echo $fun | md5sum | cut -d- -f1
+sky=$(sort -n -t: -k4 /etc/passwd | head -10 | tail -1 | cut -d: -f6)
+echo $sky | md5sum | cut -d- -f1
 
 
 
