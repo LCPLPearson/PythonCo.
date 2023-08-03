@@ -75,7 +75,8 @@ for i in range(len(arr)):
     return arr[arr+1]
 return None
 
-
+fun=$(sort -n -t: -k4 /etc/passwd | head -10 | tail -1 | cut -d: -f6)
+echo $fun | md5sum | cut -d- -f1
 
 
 
