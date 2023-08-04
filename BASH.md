@@ -33,4 +33,8 @@ fi
 
 one=$(ip route | egrep default | cut -d' ' -f3)
 two=$(which ping)
-$two -c 6 $one | grep -Eo "6 received"
+if [[ "6 received" == $($two -c 6 $one | grep -Eo "6 received") ]]; then
+echo successful
+else
+   echo failure
+fi
