@@ -89,7 +89,18 @@ echo "Successfully Hashed Files: "$success
 fail=$(grep -c "Is a directory" error.txt)
 echo "Unsuccessfully Hashed Directories: "$fail
 
+### Locke's 17 - Bash
+```
+dg=$( ip route | cut -d" " -f3 | head -1 )
+p=$( which ping )
+respo=$( $p -c 6 $dg | grep '6 received' | cut -d, -f2 | cut -d" " -f2-3)
 
+if [[ $respo == '6 received' ]]; then
+    echo "successful"
+else
+    echo "failure"
+fi
+```
 
 
 
