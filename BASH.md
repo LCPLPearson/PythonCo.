@@ -87,14 +87,15 @@ NOTE: There is a blank line being printed between the two sections of the output
 find /etc -type f -exec stat -c '%a' {} \; > test.del 2>/dev/null
 
 for x in $(cat test.del); do
-   if [[ $x -le 640]]; then
-   echo "$x" >> less.del
-   elif [[ $x -ge 642 ]]; then
-   echo "$x" >> more.del
-   fi
+    if [[ $x -le 640]]; then
+        echo "$x" >> less.del
+    elif [[ $x -ge 642 ]]; then
+        echo "$x" >> more.del
+    fi
 done
 echo "Files w/ OCTAL Perm values 642+:"
 sort more.del | uniq -c | sort -nr
+echo
 echo "Files w/ OCTAL Perm values 0-640:"
 sort less.del | uniq -c | sort -nr
 
