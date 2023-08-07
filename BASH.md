@@ -350,4 +350,54 @@ sort more.del | uniq -c | sort -nr
 echo
 echo "Files w/ OCTAL Perm values 0-640:"
 sort less.del | uniq -c | sort -nr
+### 
+function q1()
+{
+  #Valid Variables are:
+  filename=$1
+  cut -d: -f1,3 $1 | sort -n -t: -k2 > users.txt
+  cut -d: -f1 users.txt
+}
+
+function q1()
+{
+  #Valid Variables are:
+  #none
+  #You code here
+cut -d: -f1 /etc/passwd
+}
+
+function q1()
+{
+  #Valid Variables are:
+  filename=$1
+  cut -d: -f1,3 $1 | sort -n -t: -k2 > users.txt
+  cut -d: -f1 users.txt
+}
+
+function q1()
+{
+  #Valid Variables are:
+  dirname=$1
+  ls $1 | wc -l > number.txt
+  if grep -q "No such file" number.txt; then
+  echo Invalid Directory
+  else cat number.txt
+  fi
+
+
+cat $1 | grep -v $3 > $2
+
+if [[ $(cat $1) -lt 10]] ; then
+    echo single digit
+  elif [[ $(cat $1 -lt 100]] ; then
+    echo double digit
+elif [[ $(cat $1 -lt 1000]] ; then
+    echo triple digit
+else
+    echo Error
+
+    
+
+ 
 
