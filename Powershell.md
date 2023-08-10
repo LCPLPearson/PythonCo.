@@ -28,3 +28,48 @@ $employee1.Job = "Software Lead"
 $a = ((Get-Random -Minimum -10 -Maximum 0)..(Get-Random -Minimum 1 -Maximum 20))
 [array]::Reverse($a)
 echo $a
+
+
+### Thursday Excercises
+Function Get-OrdinalDate
+$date=(get=date).dateyear
+...?...
+
+get-suarenum([Int])$num)
+{$result = $num * $num
+$result
+}
+
+Function Get-Product($val1,$val2,$val3) {
+  return $val1 * $val2 * $val3
+  }
+
+Function Get-MissingSide($a,$b) {
+  return [math]::sqrt
+
+Function Get-AngleSum ($a, $b){
+return 180 - ($a + $b)
+}
+
+Function Get-UserInfo {
+  param [Paraneter(janfa
+
+Function Get-LongestNmae {
+  Begin { 
+  #count = 0
+  $states = @()
+}
+Process { while($count -lt 3) {
+$res = Read-Host "Enter a U.S. State"
+$count += 1
+}
+End {
+$list = $states | sort _property Length - descending
+foreach($state in $list) {
+"$state': " + $state.length
+
+function get-urlinfo {
+get-content "HOME\Desktop\dns.txt" | ?{$_ -match 'www\..*\.{com\ord\net' } | %
+
+}
+
