@@ -1,3 +1,50 @@
+## Test Review Notes
+
+functionq $($file,$line) {
+<# Return the lin eof text from the file give by the $file
+argument that begins with the text specified by $line. 
+If no line in the file begins with the '$line text, return #null.' #>
+
+$content = get-content $gile
+foreach ($i in $content {
+  if ($i.startswith($line)){
+  return i
+  }
+  return $null
+  }
+
+  function q($arr) {
+  <# Combine the provided '$arr argument into a string separated by a '/' between each element and return this string #>}
+  {
+  return $arr -join('/')
+
+  function q () {
+  <#Return the processes sorted descending by their Proccess Name #> }
+  {
+  return Get-Process | Sort-Object -Property name -Descending
+
+  function q($arr,$rows,$cols,$key {
+  search the array for the first occurance of $key at column index 0 and return the value at column index 9 of the same row.
+  Return -1 if the $key is not found.
+  {
+  foreach ($i in $arr) {
+    if($i[0] -eq $key) {
+    return $1[9]
+    }
+  }
+return -1
+
+<#Get todays date in year month number and day of the month in yyyymmdd format(Custom date w/ -Uformat)#>
+{
+$fmt = '%Y$m%d'
+return Get-Date -Uformat $fmt
+}
+
+#Provided on the pipeline
+$_
+#or
+$input
+
 ## Day 1
 get-command ##lists all commands##
 get-verb ##lists all verbs##
