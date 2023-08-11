@@ -1,3 +1,97 @@
+## Practice Test
+
+<# 1 #>
+function q1($var1,$var2,$var3,$var4) {
+$total = ($var1 * $var2 * $var3 * $var4)
+return $total
+    <# Return the product of the arguments #>
+}
+function q2($arr,$rows,$cols,$key) {
+foreach ($i in $arr) {
+if($i[0] -eq $key) {
+return $i[9]
+    }
+    }
+    return -1
+    <# Search the 2 dimensional array for the first occurance of key at column index 0
+       and return the value at column index 9 of the same row.
+       Return -1 if the key is not found.
+    #>
+}
+function q3 {
+$vals = @()
+do {
+    $val = Read-Host
+    if($val -ne -1) {
+    $vals += $val
+    }
+    } until ($val -eq -1)
+    return $($vals | Measure-Object -Maximum).Maximum
+
+    <# In a loop, prompt the user to enter positive integers one at time.
+       Stop when the user enters a -1. Return the maximum positive
+       value that was entered."
+	#>
+}
+function q4($filename,$whichline) {
+Get-Content $filename | Select-Object -Index $whichline
+    <# Return the line of text from the file given by the `$filename
+	   argument that corresponds to the line number given by `$whichline.
+	   The first line in the file corresponds to line number 0."
+	#>
+}
+function q5($path) {
+Get-ChildItem -Path $path | Sort-Object Name
+    <# Return the child items from the given path sorted
+       ascending by their Name
+	#>
+}
+function q6 {
+$sum = 0
+$input | foreach { $sum += $_ }
+return $sum
+
+    <# Return the sum of all elements provided on the pipeline
+	#>
+}
+function q7 {
+Get-Command -Noun Process
+	<# Return only those commands whose noun is process #>
+}
+function q8($adjective) {
+return "Powershell is $adjective"
+    <# Return the string 'PowerShell is ' followed by the adjective given
+	   by the `$adjective argument
+	#>    
+}
+function q9($addr) {
+
+if ($addr -match '((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)') {
+
+return $True
+
+} 
+
+return $False
+
+
+	<# Return `$true when the given argument is a valid IPv4 address,
+	   otherwise return `$false. For the purpose of this function, regard
+	   addresses where all octets are in the range 0-255 inclusive to
+	   be valid.
+	#>
+}
+function q10 ($filepath,$lasthash) {
+$newhash = Get-FileHash $filepath 
+if ($newhash -match $lasthash){
+return $false }
+return $true
+    <# Return `$true if the contents of the file given in the
+       `$filepath argument have changed since `$lasthash was
+       computed. `$lasthash is the previously computed SHA256
+       hash (as a string) of the contents of the file. #>
+}
+
 ## Test Review Notes
 
 functionq $($file,$line) {
