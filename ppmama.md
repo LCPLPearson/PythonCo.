@@ -16,8 +16,11 @@ WASA: command:Get-ADUser -Filter "AccountExpirationDate -le '$(Get-Date)'" -Prop
 -----
 NAMING: Brandywine,Jimenez
 -----
+PASSWORD: Brandywine,Ibarra,Sanchez
+-----
 PII: phone_matrix.xlsx
 -----
 WADB6: army\
 WADB7: 502\
 WADB3: 1
+-----
