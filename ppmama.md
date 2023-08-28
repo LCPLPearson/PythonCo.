@@ -6,3 +6,6 @@ PAD5: Admin\
 PAD6: disable\
 PAD7: get-aduser\
 PAD8: DS\
+WADB8: 21-1004336348-1177238915-682003330\
+WADB1: get-adgroup\
+WADB2: get-aduser -filter 'name -like "*"'
