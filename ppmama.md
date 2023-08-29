@@ -35,3 +35,9 @@ faster
 get-acl
 data execution prevention
 Credential Guard
+null
+\WinSxS\Backup
+dns
+blue
+CMDscan
+-h
