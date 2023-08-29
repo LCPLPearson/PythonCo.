@@ -34,3 +34,4 @@ Name,SID
 faster
 get-acl
 data execution prevention
+Credential Guard
