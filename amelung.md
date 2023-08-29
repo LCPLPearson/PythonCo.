@@ -9,3 +9,5 @@ Windows Resource Protection
 nslookup
 nbtstat
 Incident Response
+
+CPU registers, cache
