@@ -6,3 +6,6 @@ SID
 ?
 DACL
 ICACLS
+shim
+SEHOP
+/scannow
