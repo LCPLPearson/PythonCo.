@@ -9,3 +9,5 @@ ICACLS
 shim
 SEHOP
 /scannow
+System32\drivers\etc\hosts
+Red
