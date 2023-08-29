@@ -27,3 +27,10 @@ WADB: 4
 -----
 ISIDER TRAIL: Tiffany Bellacino\
 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+netstat -r
+name resolution
+/user
+Name,SID
+faster
+get-acl
+data execution prevention
