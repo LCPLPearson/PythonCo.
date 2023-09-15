@@ -11,3 +11,7 @@ nbtstat
 Incident Response
 
 CPU registers, cache
+
+467accfb25050296431008a1357eacb1_9f7a33941828bdafd2755fd20176cdf4_05e5fb96e2a117e01fc1227f1c4d664
+
+953e720e688941b15b72c098022c51c3
