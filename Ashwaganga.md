@@ -7,7 +7,7 @@ A - v2 02 1. MzkyNwo=
 
 
 PUT THE TUNNEL THAT LETS YOU ONTO CAP 2
-
+internet_host$ ssh john@[float ip] -D 9050 -NT stupid ass
 B - 
 
 
