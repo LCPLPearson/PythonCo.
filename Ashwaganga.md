@@ -9,6 +9,7 @@ A - v2 02 1. MzkyNwo=
           Pcap.4.
           Malware. SSBqdXN0IHdhbnQgdG8gc2F5IExPVkUgWU9VIFNBTgo=
           SOCKET. QmF6aW5nYQo=
+          IP DISC. 10.50.41.66
 
 
 
