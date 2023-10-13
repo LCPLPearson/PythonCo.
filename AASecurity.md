@@ -166,3 +166,16 @@ set LHOST 0.0.0.0
 exploit
 ./secureserverBuffo.py
 
+ssh key-gen ???
+id_rsa = private 
+id_rsa.pub = public
+copy the public key
+
+on box
+cat /etc
+mkdir /home/.ssh
+cat /home/.ssh
+ls -a /home/.ssh
+echo "sshpubkey" >/home/.ssh/authorized_keys
+cat /home/.ssh/authorized_keys
+ssh user@x.x.x.x
